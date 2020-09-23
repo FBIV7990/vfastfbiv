@@ -35,7 +35,7 @@ app.use("/",require("./controllers/main.controller"))
 // global error handler
 app.use(errorHandler);
 // const path = require(“path”);
-app.use(express.static(path.join(__dirname, "frontend/build")))
+app.use(express.static(path.join(__dirname, "frontend")))
 
 const port =
   process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 4001;
