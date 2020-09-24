@@ -274,41 +274,44 @@ class NewVendor extends React.Component {
                 <div style={{ textAlign: 'center' }}> <h3 style={{ background: '#2C3B4C', color: 'white', padding: '5px' }}>Profile</h3></div>
                 <div className='col-sm-8 '>
                   {/* <div className='col-sm-12' style={{ padding: '0px' }}> */}
-                  
-              <div className='col-sm-12'
-                style={{ padding: '10px' }}>
-                  
+
+                  <div className='col-sm-12'
+                    style={{ padding: '0px' }}>
 
                     <div className='col-sm-6'>
-                    <div><label>Company :</label><br /> <input className='form-input' type="text"
-                      value={this.state.company} required='required'
-                      placeholder='Company Name'
-                      onChange={(event) => { this.onChangeValue(event, 'company') }} />
-                    </div>
-                    <div><label>Company category :</label><br />
-                      <select style={{ margin: '7px' }} value={this.state.company_category} required='required'
-                        onChange={(event) => { this.onChangeValue(event, 'company_category') }} >
-                        <option name="company_category" value='proprietorship'>Proprietorship</option>
-                        <option name="company_category" value='partnership'>Partnership</option>
-                        <option name="company_category" value='llc'>LLC</option>
-                        <option name="company_category" value='pvtltd'>Pvt. ltd.</option>
-                        <option name="company_category" value='other'>Other</option>
+                      <label>Company Details :</label><br />
 
-                      </select>  </div>
-                      <div><label>Owner status :</label><br />
-                      <select style={{ margin: '7px' }} value={this.state.owner_status} required='required'
-                        onChange={(event) => { this.onChangeValue(event, 'owner_status') }} >
-                        <option name="owner_status" value="Individual">Individual</option>
-                        <option name="owner_status" value="Proprietor">Proprietor</option>
-                        <option name="owner_status" value="Partner">Partner</option>
-                        <option name="owner_status" value="Director">Director</option>
-                        <option name="owner_status" value="HRM">HRM</option>
-                        <option name="owner_status" value="HR Executive">HR Executive</option>
-                        <option name="owner_status" value="Authorised signatory">Authorised Signatory</option>
-                        <option name="owner_status" value="other">Other</option>
+                      <label>Company Name:</label> <span><input className='form-input' type="text"
+                        value={this.state.company} required='required'
+                        placeholder='Company Name'
+                        onChange={(event) => { this.onChangeValue(event, 'company') }} />
+                      </span>
+                      <span>
+                        <label>Company category:</label>
 
-                      </select>  </div>
-                      {/* <div><label>Username</label> <br /><input className='form-input' type="text"
+                        <select style={{ margin: '5px' }} value={this.state.company_category} required='required'
+                          onChange={(event) => { this.onChangeValue(event, 'company_category') }} >
+                          <option name="company_category" value='proprietorship'>Proprietorship</option>
+                          <option name="company_category" value='partnership'>Partnership</option>
+                          <option name="company_category" value='llc'>LLC</option>
+                          <option name="company_category" value='pvtltd'>Pvt. ltd.</option>
+                          <option name="company_category" value='other'>Other</option>
+
+                        </select>  </span>
+                      <span><label>Owner status :</label>
+                        <select style={{ margin: '7px' }} value={this.state.owner_status} required='required'
+                          onChange={(event) => { this.onChangeValue(event, 'owner_status') }} >
+                          <option name="owner_status" value="Individual">Individual</option>
+                          <option name="owner_status" value="Proprietor">Proprietor</option>
+                          <option name="owner_status" value="Partner">Partner</option>
+                          <option name="owner_status" value="Director">Director</option>
+                          <option name="owner_status" value="HRM">HRM</option>
+                          <option name="owner_status" value="HR Executive">HR Executive</option>
+                          <option name="owner_status" value="Authorised signatory">Authorised Signatory</option>
+                          <option name="owner_status" value="other">Other</option>
+
+                        </select>  </span>
+                      {/* <div><label>Username</label> <input className='form-input' type="text"
                         value={this.state.username} required='required'
                         placeholder='Email or Mobile'
                         onChange={(event) => { this.onChangeValue(event, 'username') }} /> </div> */}
@@ -328,13 +331,15 @@ class NewVendor extends React.Component {
                       /> </div></div> */}
                   </div>
 
-                     
 
 
 
+                  <label>Owner Details:</label>
                   <div className='col-sm-12' style={{ padding: '0px' }}>
+
                     <div className='col-sm-6'>
-                    
+
+
                       <div><label>First name</label> <br /><input className='form-input' type='text' required='required'
                         value={this.state.first_name}
                         placeholder='First name'
@@ -347,7 +352,36 @@ class NewVendor extends React.Component {
                         onChange={(event) => { this.onChangeValue(event, 'last_name') }} /> </div>
                     </div>
                   </div>
+
+                  <div> <label>Contact Person:</label></div>
+                 
+
+
                   <div className='col-sm-12' style={{ padding: '0px' }}>
+
+                   
+                    <div className='col-sm-6'>
+
+
+                      <div><label>Contact Person Name</label> <br /><input className='form-input' type='text' required='required'
+                        value={this.state.first_name}
+                        placeholder='Contact Person'
+                        onChange={(event) => { this.onChangeValue(event, 'first_name') }} /> </div>
+                    </div>
+                    <div className='col-sm-6'>
+                      {/* <div><label>Last name</label> <br /><input className='form-input' type="text" required='required'
+                   value={this.state.last_name}
+                   placeholder='Last name'
+                   onChange={(event) => { this.onChangeValue(event, 'last_name') }} /> </div> */}
+                    </div>
+                  </div>
+                  <div className='col-sm-12' style={{ padding: '0px' }}>
+                    <div className='col-sm-6'>
+                      <div><label>Phone No</label> <br /><input className='form-input' type="text" required='required'
+                        value={this.state.phone}
+                        placeholder='Phone No.'
+                        onChange={(event) => { this.onChangeValue(event, 'email') }} /> </div>
+                    </div>
                     <div className='col-sm-6'>
                       <div><label>Email</label> <br /><input className='form-input' type="text" required='required'
                         value={this.state.email}
@@ -363,7 +397,7 @@ class NewVendor extends React.Component {
                   <div><label>Profile picture</label><br /> </div>
 
                   <img src={this.state.profile} style={{ margin: ' 0px 0px 3px 10px', borderRadius: '5%', height: '200px', width: '200px' }} /><br />
-                  <div class="upload-btn-wrapper" style={{ margin: '7px 0px 5px 10px' }}>
+                  <div className="upload-btn-wrapper" style={{ margin: '7px 0px 5px 10px' }}>
                     <button class="image-btn">Upload a file</button>
                     <input type="file" name="myfile" ref={this.avatar} onChange={() => { this.onChangeProfile() }} maxLength='1200' />
                   </div>
@@ -374,7 +408,7 @@ class NewVendor extends React.Component {
 
               <div className='col-sm-12'
                 style={{ padding: '10px' }}>
-               {/* // <div className='col-sm-12'>
+                {/* // <div className='col-sm-12'>
                   <div className='col-sm-4'>
                     <div><label>Company :</label><br /> <input className='form-input' type="text"
                       value={this.state.company} required='required'
@@ -610,7 +644,7 @@ class NewVendor extends React.Component {
               <div className='col-sm-12' >
                 <div className='col-sm-12'>
                   <div className='col-sm-3'>
-                    <div><label>Company Logo :</label><br />
+                    <div><label>ID :</label><br />
                       <img src={this.state.logo}
                         style={{ margin: ' 0px 0px 3px 10px', borderRadius: '5%', height: '200px', width: '200px' }} /><br />
                       <div class="upload-btn-wrapper" style={{ margin: '7px 0px 5px 10px' }}>
@@ -648,7 +682,7 @@ class NewVendor extends React.Component {
                   <div className='col-sm-3'>
 
 
-                    <div> <label>Bussiness card-Back:</label><br />
+                    <div> <label>Other Document:</label><br />
                       <img src={this.state.bannerBack}
                         style={{ margin: ' 0px 0px 3px 10px', borderRadius: '5%', height: '200px', width: '200px' }} /><br />
                       <div class="upload-btn-wrapper" style={{ margin: '7px 0px 5px 10px' }}>
