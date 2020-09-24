@@ -363,7 +363,7 @@ class NewVendor extends React.Component {
                     <div className='col-sm-6'>
 
 
-                      <div><label>Contact Person Name</label> <br /><input className='form-input' type='text' required='required'
+                      <div><label>Person Name</label> <br /><input className='form-input' type='text' required='required'
                         value={this.state.first_name}
                         placeholder='Contact Person'
                         onChange={(event) => { this.onChangeValue(event, 'first_name') }} /> </div>
