@@ -1,3 +1,3 @@
 module.exports = {
-  url: "mongodb://localhost:27017/vfastdb"
+  url: "mongodb+srv://user:user@cluster0.kdrb2.mongodb.net/user?retryWrites=true&w=majority"
 };
