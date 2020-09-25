@@ -674,7 +674,7 @@ onChange={(event)=>{this.onChangeValue(event,'cin')}}
 <div className='col-sm-12' >
 <div className='col-sm-12'>
 <div className='col-sm-3'>
-<div><label>Company Logo :</label><br/>
+<div><label>ID :</label><br/>
 <img src={this.state.logo} 
 style={{margin:' 0px 0px 3px 10px',borderRadius:'5%',height:'200px',width:'200px'}} /><br/>
 <div class="upload-btn-wrapper" style={{margin:'7px 0px 5px 10px'}}>
@@ -707,7 +707,7 @@ style={{margin:' 0px 0px 3px 10px',borderRadius:'5%',height:'200px',width:'200px
 </div>
 <div className='col-sm-3'>
 
-<div> <label>Bussiness card-Back:</label><br/>
+<div> <label>Other Documnet:</label><br/>
 <img src={this.state.bannerBack} 
 style={{margin:' 0px 0px 3px 10px',borderRadius:'5%',height:'200px',width:'200px'}} /><br/>
 <div class="upload-btn-wrapper" style={{margin:'7px 0px 5px 10px'}}>

@@ -104,7 +104,7 @@ style={{height:'300px',width:'300px'}} />
        <img src={apiUrl+'/'+profile.business_card.front} style={{height:'100px',width:'100px'}} /></div>
           </div>
       <div className='col-sm-6'>
-      <div><label>Bussiness card-back:</label> 
+      <div><label>Other Document:</label> 
       <img src={apiUrl+'/'+profile.business_card.back} style={{height:'100px',width:'100px'}} /></div>
 
       </div>

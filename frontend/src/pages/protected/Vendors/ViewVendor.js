@@ -180,7 +180,7 @@ style={{height:'300px',width:'300px'}} />
        <img src={apiUrl+'/'+vendor.profile.business_card.front} style={{height:'150px',width:'150px'}} /></div>
           </div>
       <div className='col-sm-6'>
-      <div><label>Bussiness card-back:</label> <br/>
+      <div><label>Other Documnent:</label> <br/>
       <img src={apiUrl+'/'+vendor.profile.business_card.back} style={{height:'150px',width:'150px'}} /></div>
 
       </div>
