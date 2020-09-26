@@ -6,6 +6,8 @@ import gst from '../../../img/gst.jpg';
 import card from '../../../img/card.jpg';
 import logoImage from '../../../img/default.jpg';
 import { employerActions } from "../../../actions";
+// import Signature from '../../sign/Signature'
+
 
 class NewEmployer extends React.Component {
   constructor(props) {
@@ -614,6 +616,7 @@ class NewEmployer extends React.Component {
                   </div>
                   <div className='col-sm-4'></div>
                 </div>
+                {/* <Signature /> */}
               </div>
             </div>
           </div>

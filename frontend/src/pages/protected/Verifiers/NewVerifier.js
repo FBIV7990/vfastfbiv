@@ -5,7 +5,8 @@ import DataTable, { createTheme } from "react-data-table-component";
 import {Card,CardTitle,CardBody,Row,Col} from 'reactstrap'
 import { userActions ,verifierActions} from "../../../actions";
 import Thumbnail from '../../../img/operation.png'
-import {TextBox} from '../../../components'
+import {TextBox} from '../../../components';
+import Signature from '../../sign/Signature'
 
 
 
@@ -148,6 +149,7 @@ dispatch(verifierActions.create(formdata));
 <TextBox label="Email" type="email" name="email"  onTextChanged={this.onValueChanged}/>
 
 <TextBox label="Mobile" type="text" name="mobile"  onTextChanged={this.onValueChanged}/>
+<Signature />
 
 
           <div className='submit-button' onClick={()=>{this.onSubmit()}}>Submit</div>
