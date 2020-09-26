@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import DataTable, { createTheme } from "react-data-table-component";
 import { CSVLink, CSVDownload } from "react-csv";
+import XMLViewer from 'react-xml-viewer'
+
 import CheckBox from "react-animated-checkbox";
 
 import { presetFormActions } from "../../../actions";
 import select from "../../../img/select.png";
+import Download from "react-csv/components/Download";
 
 class Forms extends React.Component {
   constructor(props) {
@@ -94,11 +97,11 @@ class Forms extends React.Component {
           <div class="col-sm 6">
             <div>
               <div>
-              <h3>Select your checks and download excel file</h3>          
-             
-        
-              <div>
-         
+                <h3>Select your checks and download excel file</h3>
+
+
+                <div>
+
                   <CheckBox
                     checked={this.state.chkPhysical}
                     checkBoxStyle={{
@@ -110,112 +113,112 @@ class Forms extends React.Component {
                     onClick={() => {
                       this.setState({ chkPhysical: !this.state.chkPhysical });
                     }}
-                  />             
-                  <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-Physical Check</a>
-               
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    Physical Check</a>
+
+                </div>
+
+                <div>
+
+                  <CheckBox
+                    checked={this.state.chkEducation}
+
+                    checkBoxStyle={{
+                      checkedColor: "#2C3B4C",
+                      size: 35,
+                      unCheckedColor: "#b8b8b8",
+                    }}
+                    duration={400}
+                    onClick={(e) => {
+                      this.setState({ chkEducation: !this.state.chkEducation });
+                    }}
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    Education Check</a>
+
+                </div>
+
+
+                <div>
+
+                  <CheckBox
+                    checked={this.state.chkPreEmployment}
+
+                    checkBoxStyle={{
+                      checkedColor: "#2C3B4C",
+                      size: 35,
+                      unCheckedColor: "#b8b8b8",
+                    }}
+                    duration={400}
+                    onClick={(e) => {
+                      this.setState({ chkPreEmployment: !this.state.chkPreEmployment });
+                    }}
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    Pre Employment Check</a>
+
+                </div>
+
+                <div>
+
+                  <CheckBox
+                    checked={this.state.chkCibil}
+
+                    checkBoxStyle={{
+                      checkedColor: "#2C3B4C",
+                      size: 35,
+                      unCheckedColor: "#b8b8b8",
+                    }}
+                    duration={400}
+                    onClick={(e) => {
+                      this.setState({ chkCibil: !this.state.chkCibil });
+                    }}
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    CIBIL score Check</a>
+
+                </div>
+                <div>
+
+                  <CheckBox
+                    checked={this.state.chkJudicial}
+
+                    checkBoxStyle={{
+                      checkedColor: "#2C3B4C",
+                      size: 35,
+                      unCheckedColor: "#b8b8b8",
+                    }}
+                    duration={400}
+                    onClick={(e) => {
+                      this.setState({ chkJudicial: !this.state.chkJudicial });
+                    }}
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    Judicial Check</a>
+
+                </div>
+                <div>
+
+                  <CheckBox
+                    checked={this.state.chkDrugTest}
+
+                    checkBoxStyle={{
+                      checkedColor: "#2C3B4C",
+                      size: 35,
+                      unCheckedColor: "#b8b8b8",
+                    }}
+                    duration={400}
+                    onClick={(e) => {
+                      this.setState({ chkDrugTest: !this.state.chkDrugTest });
+                    }}
+                  />
+                  <a style={{ fontSize: '18px', color: '#2C3B4C', padding: '10px 15px', position: 'absolute', marginTop: '10px' }} >
+                    Drug Test</a>
+
+                </div>
+
               </div>
-            
-              <div>
-         
-         <CheckBox
-           checked={this.state.chkEducation}
-         
-           checkBoxStyle={{
-             checkedColor: "#2C3B4C",
-             size: 35,
-             unCheckedColor: "#b8b8b8",
-           }}
-           duration={400}
-           onClick={(e) => {
-            this.setState({ chkEducation: !this.state.chkEducation });
-           }}
-         />             
-         <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-Education Check</a>
-      
-     </div>
-       
-   
-              <div>
-         
-         <CheckBox
-           checked={this.state.chkPreEmployment}
-         
-           checkBoxStyle={{
-             checkedColor: "#2C3B4C",
-             size: 35,
-             unCheckedColor: "#b8b8b8",
-           }}
-           duration={400}
-           onClick={(e) => {
-            this.setState({ chkPreEmployment: !this.state.chkPreEmployment });
-           }}
-         />             
-         <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-Pre Employment Check</a>
-      
-     </div>
-          
-     <div>
-         
-         <CheckBox
-           checked={this.state.chkCibil}
-         
-           checkBoxStyle={{
-             checkedColor: "#2C3B4C",
-             size: 35,
-             unCheckedColor: "#b8b8b8",
-           }}
-           duration={400}
-           onClick={(e) => {
-            this.setState({ chkCibil: !this.state.chkCibil });
-           }}
-         />             
-         <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-CIBIL score Check</a>
-      
-     </div>
-     <div>
-         
-         <CheckBox
-           checked={this.state.chkJudicial}
-         
-           checkBoxStyle={{
-             checkedColor: "#2C3B4C",
-             size: 35,
-             unCheckedColor: "#b8b8b8",
-           }}
-           duration={400}
-           onClick={(e) => {
-            this.setState({ chkJudicial: !this.state.chkJudicial });
-           }}
-         />             
-         <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-Judicial Check</a>
-      
-     </div>
-     <div>
-         
-         <CheckBox
-           checked={this.state.chkDrugTest}
-         
-           checkBoxStyle={{
-             checkedColor: "#2C3B4C",
-             size: 35,
-             unCheckedColor: "#b8b8b8",
-           }}
-           duration={400}
-           onClick={(e) => {
-            this.setState({ chkDrugTest: !this.state.chkDrugTest });
-           }}
-         />             
-         <a style={{fontSize:'18px',color:'#2C3B4C',padding:'10px 15px',position:'absolute',marginTop: '10px'}} >
-Drug Test</a>
-      
-     </div>
-     
-           </div> 
               <div>
                 <br />
                 <CSVLink data={[this.columns]}>
@@ -228,7 +231,9 @@ Drug Test</a>
                       border: "0px solid white",
                     }}
                   >
-                    Download now &nbsp;<i class="fa fa-fw fa-download"></i>
+
+                    Download now
+                    &nbsp;<i class="fa fa-fw fa-download"></i>
                   </button>
                 </CSVLink>
               </div>

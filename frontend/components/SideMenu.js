@@ -220,7 +220,6 @@ return( <li >
 
                 <ul class="sub-menu-dropdown">
                     <li><a href="">New</a></li>
-
                     <li><a href="">List</a></li>
                 </ul>
             </li>
