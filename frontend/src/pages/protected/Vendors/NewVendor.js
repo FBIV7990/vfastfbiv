@@ -7,6 +7,7 @@ import gst from '../../../img/gst.jpg';
 import card from '../../../img/card.jpg';
 import logoImage from '../../../img/default.jpg';
 import { vendorActions, } from "../../../actions";
+import Geolocation from '../../../location/Geolocation'
 
 class NewVendor extends React.Component {
   constructor(props) {
@@ -352,17 +353,9 @@ class NewVendor extends React.Component {
                         onChange={(event) => { this.onChangeValue(event, 'last_name') }} /> </div>
                     </div>
                   </div>
-
                   <div> <label>Contact Person:</label></div>
-                 
-
-
-                  <div className='col-sm-12' style={{ padding: '0px' }}>
-
-                   
+                  <div className='col-sm-12' style={{ padding: '0px' }}>                  
                     <div className='col-sm-6'>
-
-
                       <div><label>Person Name</label> <br /><input className='form-input' type='text' required='required'
                         value={this.state.first_name}
                         placeholder='Contact Person'
@@ -687,6 +680,7 @@ class NewVendor extends React.Component {
                         style={{ margin: ' 0px 0px 3px 10px', borderRadius: '5%', height: '200px', width: '200px' }} /><br />
                       <div class="upload-btn-wrapper" style={{ margin: '7px 0px 5px 10px' }}>
                         <button class="image-btn">Upload a file</button>
+                        <Geolocation />
                         <input type="file" name="myfile" ref={this.bannerFileBack} onChange={() => { this.onChangebannerBack() }} />
                       </div>
                     </div>
@@ -697,7 +691,7 @@ class NewVendor extends React.Component {
 
                 <div class='col-sm-12' style={{ background: 'light grey', margin: '15px 0px' }}>
                   <div className='col-sm-4'></div>
-                  <div className='col-sm-6'><div className='submit-button' onClick={() => { this.onSubmit() }}>Submit</div>
+                  <div className='col-sm-6'><div className='submit-button' onClick={() => { this.onSubmit() }}>Submi</div>
                     <div className='submit-button' onClick={() => { this.cancelAll() }}>Clear</div>
                   </div>
                   <div className='col-sm-4'></div>

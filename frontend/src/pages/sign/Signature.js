@@ -5,13 +5,10 @@ import "./signCanvas.css";
 
 function Signature() {
   const [imageURL, setImageURL] = useState(null); // create a state that will contain our image url
-
   const sigCanvas = useRef({});
-
   /* a function that uses the canvas ref to clear the canvas 
   via a method given by react-signature-canvas */
   const clear = () => sigCanvas.current.clear();
-
   /* a function that uses the canvas ref to trim the canvas 
   from white spaces via a method given by react-signature-canvas
   then saves it in our state */
@@ -60,5 +57,4 @@ function Signature() {
     </div>
   );
 }
-
 export default Signature;

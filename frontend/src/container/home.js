@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {Slider,Body} from '../components'
 
 
+
 class Home extends React.Component{
 
     render(){

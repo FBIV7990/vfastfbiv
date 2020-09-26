@@ -24,6 +24,7 @@
     "react-date-picker": "^8.0.3",
     "react-dom": "^16.13.1",
     "react-fa": "^5.0.0",
+    "react-google-location": "^1.2.2",
     "react-images-upload": "^1.2.8",
     "react-modal-image": "^2.5.0",
     "react-redux": "^7.2.1",

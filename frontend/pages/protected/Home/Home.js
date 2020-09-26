@@ -13,13 +13,9 @@ class Home extends React.Component {
     super(props);
 
   }
-
-
   componentDidMount() {
 
   }
-
-
   render() {
     const { users } = this.props;
 
@@ -82,8 +78,6 @@ class Home extends React.Component {
                 <div>
                   <h1>Analaytics </h1>
                 </div>
-                
-
               </a>
             </div>
           </div>
